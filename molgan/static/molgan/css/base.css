@@ -1,0 +1,183 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+body {
+	font-family: 'Roboto', sans-serif;
+	color: #a1a2ac;
+}
+
+section {
+	padding: 3rem 0;
+	background: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	color: #242424;
+}
+
+h1.section-title {
+	font-size: 2.2rem;
+	margin-bottom: 1.3rem;
+}
+
+a {
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+p.lead {
+	color: #a1a2ac;
+	margin-bottom: 6rem;
+}
+
+.btn {
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.btn-outline-signin {
+	border: 1px solid #e1e8ee;
+}
+
+.btn-start {
+	background: #fd4d66;
+	color: #fff;
+	padding: 0.8rem;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.btn-start:hover,
+.btn-start:focus {
+	color: #fff;
+}
+
+.btn-outline-start {
+	background: #fff;
+	border: 1px solid #fddbe4;
+	color: #fd4d66;
+	padding: 0.8rem;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.btn-outline-start:hover,
+.btn-outline-start:focus {
+	color: #fd4d66;
+}
+
+section.pricing-plans {
+	background: #fff;
+	padding: 8rem 0;
+}
+
+#navbar-main {
+	position: absolute;
+	font-family: 'Roboto', sans-serif;
+	background: #fff;
+	border-bottom: 1px solid #e1e8ee;
+}
+
+#navbar-main .navbar-brand {
+	color: #fd4d66;
+	text-transform: lowercase;
+	font-weight: 600;
+	font-size: 1.40rem;
+}
+
+#navbar-main .navbar-toggler {
+	border: none;
+	font-size: 2rem;
+}
+
+#navbar-main .navbar-nav > li.nav-item > a {
+	text-transform: uppercase;
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+@media only screen and (min-width: 992px) {
+	#navbar-main {
+		background: transparent;
+		border-bottom: 1px solid transparent;
+	}
+	
+	#navbar-main .navbar-nav > li.nav-item > a {
+		color: #a1a2ac;
+		padding: 1rem;
+	}
+	
+	#navbar-main .navbar-nav > li.nav-item > a:hover,
+	#navbar-main .navbar-nav > li.nav-item > a:focus {
+		color: #242424;
+	}
+}
+
+/* Index */
+
+.pricing-box {
+	padding: 1rem;
+	background: #fff;
+	border: 1px solid #e1e8ee;
+}
+
+.pricing-box .card-title {
+	font-size: 1rem;
+	line-height: 2;
+}
+
+.pricing-box .currency {
+	top: -1.50rem;
+	font-size: 1.50rem;
+	letter-spacing: 0.75rem;
+	margin-right: -1.5rem;
+}
+
+.pricing-box .amount {
+	font-size: 3.8rem;
+}
+
+.pricing-box .month {
+	color: #a1a2ac;
+	margin-left: -0.8rem;
+}
+
+.pricing-box .list-group {
+	margin-bottom: 1rem;
+}
+
+.pricing-box .list-group-item {
+	padding: 0.45rem 1rem;
+	border: none;
+}
+
+.pricing-premium {
+	position: relative;
+	z-index: 1;
+	-webkit-box-shadow: 0 5px 10px rgba(0,0,0,.09);
+	-moz-box-shadow: 0 5px 10px rgba(0,0,0,.09);
+	box-shadow: 0 5px 10px rgba(0,0,0,.09);
+}
+
+@media (max-width: 768px) {
+	.pricing-box {
+		margin-bottom: 1rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.pricing-premium {
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		transform: scale(1.05);
+	}
+}

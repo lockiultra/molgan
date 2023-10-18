@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="display-4 text-center">MPNN</h1>
+    <p class="lead text-center">Predicition for {{ smiles }}</p>
+    {% if prediction_table %}
+        <table class="table" style="width: 600px;">
+            <thead>
+                <tr>
+                    <th class="h1">Disease</th>
+                    <th class="h1">Probability</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for disease in prediction_table %}
+                <tr>
+                    <td>{{ disease.name }}</td>
+                    <td>{{ disease.prediction }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p class="text-center">Invalid SMILES!</p>
+    {% endif %}
+{% endblock %}

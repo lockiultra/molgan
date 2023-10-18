@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card-group">
+    <div class="card">
+      <img src="https://i.ibb.co/MSksy50/20231017-215939.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">JTVAE</h5>
+        <p class="card-text">Junction Variotional Autoencoder for SMILES generation.</p>
+      </div>
+      <a class="card-footer btn" href="/models/jtvae">
+        <small class="text-muted">Go to model</small>
+      </a>
+    </div>
+    <div class="card">
+      <img src="https://i.ibb.co/3h3F9X4/20231017-220226.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">MPNN</h5>
+        <p class="card-text">Message Passing Neural Network for disease probability prediction.</p>
+      </div>
+      <a class="card-footer btn" href="/models/mpnn">
+        <small class="text-muted">Go to model</small>
+      </a>
+    </div>
+    <div class="card">
+      <img src="https://i.ibb.co/wYxVfb0/20231017-220037.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">MPNN for SMILES list</h5>
+        <p class="card-text">Message Passing Neural Network for SMILES list prediction.</p>
+      </div>
+      <a class="card-footer btn" href="/models/mpnn_list">
+        <small class="text-muted">Go to model</small>
+      </a>
+    </div>
+  </div>
+{% endblock %}

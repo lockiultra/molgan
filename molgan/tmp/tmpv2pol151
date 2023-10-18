@@ -1,0 +1,34 @@
+[
+    {
+        "status": "NOT OK",
+        "error": "Invalid SMILES",
+        "smiles": "smiles1"
+    },
+    {
+        "status": "NOT OK",
+        "error": "Invalid SMILES",
+        "smiles": "smiles2"
+    },
+    {
+        "cardiovascular_disease": 0.02828921191394329,
+        "digestive_system_disease": 0.00016247127496171743,
+        "immune_system_disease": 0.01929067075252533,
+        "mental_and_behavioural_disorder": 7.972773164510727e-05,
+        "metabolic_disease": 0.00940981600433588,
+        "nervous_system_disease": 0.93169766664505,
+        "skin_and_connective_tissue_disease": 0.0021119839511811733,
+        "urinary_system_disease": 0.05361213907599449,
+        "status": "OK",
+        "smiles": "O=C(CS(=O)c1cccc2c1OCCO2)N1CCCC1"
+    },
+    {
+        "status": "NOT OK",
+        "error": "Invalid SMILES",
+        "smiles": "smiles4"
+    },
+    {
+        "status": "NOT OK",
+        "error": "Invalid SMILES",
+        "smiles": "COC(=O)C1CN(c2ncccc2C)CC[NH2+]1"
+    }
+]

@@ -1,0 +1,57 @@
+.pricing-box {
+	padding: 1rem;
+	background: #fff;
+	border: 1px solid #e1e8ee;
+}
+
+.pricing-box .card-title {
+	font-size: 1rem;
+	line-height: 2;
+}
+
+.pricing-box .currency {
+	top: -1.50rem;
+	font-size: 1.50rem;
+	letter-spacing: 0.75rem;
+	margin-right: -1.5rem;
+}
+
+.pricing-box .amount {
+	font-size: 3.8rem;
+}
+
+.pricing-box .month {
+	color: #a1a2ac;
+	margin-left: -0.8rem;
+}
+
+.pricing-box .list-group {
+	margin-bottom: 1rem;
+}
+
+.pricing-box .list-group-item {
+	padding: 0.45rem 1rem;
+	border: none;
+}
+
+.pricing-premium {
+	position: relative;
+	z-index: 1;
+	-webkit-box-shadow: 0 5px 10px rgba(0,0,0,.09);
+	-moz-box-shadow: 0 5px 10px rgba(0,0,0,.09);
+	box-shadow: 0 5px 10px rgba(0,0,0,.09);
+}
+
+@media (max-width: 768px) {
+	.pricing-box {
+		margin-bottom: 1rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.pricing-premium {
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		transform: scale(1.05);
+	}
+}

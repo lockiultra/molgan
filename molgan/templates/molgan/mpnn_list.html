@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="display-4 text-center">MPNN for SMILES list</h1>
+<form class="input-group mb-3" method="post" enctype="multipart/form-data" style="width: 800px;">
+    <input type="file" class="form-file-input" id="customFileLg" style="width: 650px;" name="smiles_file">
+    <label class="form-file-label" for="customFileLg" style="height: 38px; width: 650px;">
+      <span class="form-file-text" id="file-name">Browse files</span>
+    </label>
+    <button class="btn btn-outline-secondary" type="submit">Predict</button>
+</form>
+
+<div class="card">
+    <p style="margin: 5px;">
+        Upload .txt with SMILES following file format: <br>
+        &emsp;smiles_1 <br>
+        &emsp;smiles_2 <br>
+        &emsp;... <br>
+        &emsp;smiles_n
+    </p>
+</div>
+<script src="/static/molgan/js/mpnn_list.js"></script>
+
+{% endblock %}

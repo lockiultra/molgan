@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="display-4 text-center">MPNN</h1>
+<form method="post" class="input-group mb-3" style="width: 800px;" action="/models/mpnn" >
+    <span class="input-group-text" id="inputGroup-sizing-default">SMILES</span>
+    <input type="text" class="form-control"  name="smiles" value="{{ smiles }}">
+    <a class="btn btn-outline-secondary" type="submit" href="/get_generate_smiles_for_mpnn">Generate</a>
+    <button class="btn btn-outline-secondary" type="submit">Predict</button>
+</form>
+
+
+{% endblock %}
