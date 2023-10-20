@@ -1,12 +1,12 @@
 from fastapi import FastAPI, Request, Form
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import RedirectResponse, FileResponse
-from utils import get_generate_smiles, get_predict_list
-from views import *
+from molgan.utils import get_generate_smiles, get_predict_list
+from molgan.views import *
 
 app = FastAPI()
-app.mount('/static', StaticFiles(directory='./static'), name='static')
-app.mount('/tmp', StaticFiles(directory='./tmp'), name='tmp')
+app.mount('/static', StaticFiles(directory='./molgan/static'), name='static')
+app.mount('/tmp', StaticFiles(directory='/app/molgan/tmp'), name='tmp')
 
 @app.get('/')
 async def index(request: Request):
@@ -43,7 +43,7 @@ async def mpnn_list(request: Request, smiles_file = Form()):
 @app.post('/models/mpnn_list/predict')
 async def mpnn_list_predict(request: Request):
     filename = request.query_params.get('filename', '')
-    filename = '/tmp/' + filename.split('/')[-1]
+    # filename = './molgan/tmp/' + filename.split('/')[-1]
     return await mpnn_list_predict_view(request, filename)
 
 @app.get('/get_generate_smiles_for_mpnn')
@@ -51,10 +51,14 @@ async def get_generate_smiles_for_mpnn(request: Request):
     smiles = await get_generate_smiles()
     return RedirectResponse('/models/mpnn?smiles='+smiles)
 
+@app.get('/app/molgan/tmp/{filename}')
+async def get_tmp_file(request: Request, filename):
+    return FileResponse(f'/app/molgan/tmp/{filename}')
+
 # Middleware
 
 @app.middleware('http')
-async def catch_exception_middleware(request: Request, call_next):
+async def catch_404_exception_middleware(request: Request, call_next):
     try:
         response = await call_next(request)
         assert response.status_code != 404
@@ -62,3 +66,4 @@ async def catch_exception_middleware(request: Request, call_next):
     except Exception as e:
         print(e)
         return templates.TemplateResponse('404.html', {'request': request, 'error': str(e)})
+    

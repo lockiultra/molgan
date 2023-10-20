@@ -1,9 +1,9 @@
 from fastapi.responses import FileResponse
 from fastapi.templating import Jinja2Templates
 
-from utils import get_generate_smiles, get_predict, prediction_to_table
+from molgan.utils import get_generate_smiles, get_predict, prediction_to_table
 
-templates = Jinja2Templates('./templates/molgan')
+templates = Jinja2Templates('./molgan/templates/molgan')
 
 async def root_view(request):
     return templates.TemplateResponse('index.html', {'request': request})
